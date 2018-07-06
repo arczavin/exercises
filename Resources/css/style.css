@@ -1,0 +1,215 @@
+ body {
+	background-color: #f3f3f3; /* ustawiamy kolor tÅ‚a naszej strony */
+	font-family: Helvetica, sans-serif; /* ustawiamy czcionkÄ™ z ktÃ³rej korzystamy */
+}
+
+#formularz {
+	width:25%; /* ustawiamy szerokoÂœÄ‡ formularza */
+	margin:0 auto; /* jeÅ¼eli nasz formularz ma ustawionÅ¡ szerokoÂœÄ‡ wyÂœrodkowujemy go */
+	background-color:#fff; /* dodajemy kolor tÅ‚a naszemu formularzowi */
+	border:2px solid #ccc; /* dodajemy obramowanie o szerokoÂœci 2px */
+	border-radius:10px; /* zaokrÅ¡glamy tÅ‚o naszego formularza */
+	padding:20px; /* dodajemy margines wewnÅ¡trz naszego formularza */
+	margin-top:20px; /* dodajemy margines gÃ³rny naszego formularza */
+}
+
+#formularz label {
+    display:block;/* ustawiamy by label rozpoczynaÅ‚ siÄ™ od nowej linii*/
+    margin-bottom:4px;/* dodajemy margines dolny */
+    font-weight:bold; /*  pogrubiamy czcionkÄ™ */
+   text-transform: uppercase;  /* zamieniamy wszystkie litery na duÅ¼e */
+    font-size:0.8vw; /* ustawiamy wielkoÂœÄ‡ czcionki */
+    color:#555555; /* ustawiamy kolor czcionki */
+}
+#formularz label2 {
+    display:block;/* ustawiamy by label rozpoczynaÅ‚ siÄ™ od nowej linii*/
+    margin-bottom:5px;/* dodajemy margines dolny */
+    font-weight:bold; /* pogrubiamy czcionkÄ™ */
+   text-transform: uppercase; /*  zamieniamy wszystkie litery na duÅ¼e */
+    font-size:0.8vw; /* ustawiamy wielkoÂœÄ‡ czcionki */
+    color:#555555; /* ustawiamy kolor czcionki */
+}
+#formularz label3 {
+    display:block;/* ustawiamy by label rozpoczynaÅ‚ siÄ™ od nowej linii*/
+    margin-bottom:5px;/* dodajemy margines dolny */
+    font-weight:bold; /* pogrubiamy czcionkÄ™ */
+    text-transform: uppercase; /* zamieniamy wszystkie litery na duÅ¼e */
+    font-size:1vw; /* ustawiamy wielkoÂœÄ‡ czcionki */
+    color:black; /* ustawiamy kolor czcionki */
+}
+#formularz label4 {
+    display:block;/* ustawiamy by label rozpoczynaÅ‚ siÄ™ od nowej linii*/
+    margin-bottom:5px;/* dodajemy margines dolny */
+    font-weight:bold; /* pogrubiamy czcionkÄ™ */
+    text-transform: uppercase; /* zamieniamy wszystkie litery na duÅ¼e */
+    font-size:0.8px; /* ustawiamy wielkoÂœÄ‡ czcionki */
+    color:#555555; /* ustawiamy kolor czcionki */
+}
+
+#formularz textarea{
+	padding:3.3px; /* dodajemy margines wewnÅ¡trz naszego pola */
+	font-family: Helvetica, sans-serif;/*nadpisanie fonta dla obiektÃ³w typu textarea*/
+	font-size:0.8vw; /*statyczny rozmiar fonta*/
+	border:0.5px solid #ccc; /* dodajemy obramowanie */
+	border-radius:4px; /* dodajemy zaokraglone rogi */
+	margin-bottom:25px; /* dodajemy margines dolny */
+	width:345px; /* ustalamy szerokoÂœÄ‡ */
+}
+
+#formularz input {
+	padding:3.3px; /* dodajemy margines wewnÅ¡trz naszego pola */
+	border-radius:4px; /* dodajemy zaokraglone rogi */
+	border:0.5px solid #ccc; /* dodajemy obramowanie */
+	margin-bottom:8px; /* dodajemy margines dolny */
+	width:345px; /* ustalamy szerokoÂœÄ‡ */
+}
+
+#formularz input#submit {
+	width:100%; /* ustalamy szerokoÂœÄ‡ */
+	cursor:pointer; /* zmieniamy kursor */
+	margin-bottom:0px;/* resetujemy margines dolny */
+	font-weight:bold; /* pogrubiamy czcionkÄ™ */
+    text-transform: uppercase; /* zamieniamy wszystkie litery na duÅ¼e */
+    font-size:0.8vw; /* ustawiamy wielkoÂœÄ‡ czcionki */
+    color:white; /* ustawiamy kolor czcionki */
+	background: #2196F3;/*kolor tÅ‚a*/
+	border: 1px solid #ccc;/*krawÄ™dzie*/
+	border-radius: 3px;/*serokoÂœÄ‡ zaokrÅ¡glenia krawÄ™dzi*/
+	height:4%;/*wysokoÂœÄ‡*/
+}
+
+#formularz p.copy {
+	color:#555555; /* ustawiamy kolor czcionki */
+	margin-bottom:0px; /* resetujemy margines dolny */
+	font-size:12px; /* ustawiamy rozmiar czcionki */
+	text-align: center; /* wyÂœrodkowywujemy tekst */
+}
+
+#formularz p.copy a {
+	color:#555555;/* ustawiamy kolor czcionki */
+	text-decoration: none; /* usuwamy podkreÂœlenie linku */
+	font-weight:bold; /* pogrubiamy czcionkÄ™ */
+}
+
+.flag-icon-background {
+	background-size:contain;
+	background-position:50%;
+	background-repeat:no-repeat;
+}	
+.flag-icon { 
+	background-size:contain;
+	background-position:50%;
+	background-repeat:no-repeat;
+	position:relative;
+	display:inline-block;
+	width:1.33333333em;
+	line-height:1em;
+	border: 1px solid #000000;
+	
+}
+.flag-icon:before {
+	content:"\00a0"
+}
+.flag-icon.flag-icon-squared {
+	width:1em
+}
+.flag-icon-pl {
+	background-image:url(pl.svg)	
+}
+.flag-icon-gb {
+	background-image:url(gb.svg)	
+}
+.flag-icon-pl.flag-icon-squared {
+	background-image:url(.svg)
+}
+
+ /*customizacja containera*/
+.container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* wyÅ‚Å¡czenie standardowych opcji html dla obiektu Container */
+.container input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* wÅ‚asny checkmark */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #eee;
+  border: 0.5px solid #cccccc;
+  border-radius:11px;
+  font-size: 4px;
+}
+
+/* niebieski kolor gdy radio box jest zaznaczony */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+  border: 0.5px solid #2196F3;
+}
+
+/* CiÅ¡g dalszy zwiÅ¡zany z bialÅ¡ kropkÅ¡ widocznÅ¡ gdy zaznaczysz radioboxa */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.ui-select {
+	width: 100%
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+select{
+    -webkit-appearance: none;
+    appearance: none;
+	color: white;
+    font-weight: bold;
+	background: #2196F3;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+	padding: 5px 8px;
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+}
+
+@-moz-document url-prefix(){
+	.ui-select{
+	border: none;
+
+	position: relative;
+	overflow: hidden;
+	box-shadow: none;
+}
+
+.ui-select option {
+	color:white;
+	background:#2196F3;
+
+}
+
+.ui-select select {
+  width: 100%;
+  background-position: right 30px center !important;
+  border: none !important;
+  overflow: hidden;
+
+}
+

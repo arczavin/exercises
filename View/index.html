@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularz Kontaktowy MNK</title>
+  <link type="text/css" rel="stylesheet" href="../Resources/css/style.css">
+<style>
+	transform:rotate(45deg); /* dla wszystkich w przyszĹoĹci */
+	-moz-transform:rotate(45deg); /* dla Firefox */
+	-webkit-transform:rotate(45deg); /* dla Google Chrome, Safari, Opera 15+ */
+	-ms-transform:rotate(45deg); /* dla Internet Explorer */
+</style>
+<script>
+function sowl()
+{
+		document.getElementById("lekcjaGG").style.display = "none";
+		document.getElementById("lekcjaKS").style.display = "none";
+}
+
+function owl()
+{
+		if (document.getElementById("oddzial").value == "1" /*&& document.getElementById("wiek").value == "Prz"*/)
+		{
+			flekcjaGGPrz();
+		}
+		if (document.getElementById("oddzial").value == "1" /*&& document.getElementById("wiek").value == "Pod"*/)
+		{
+			flekcjaGGPod();
+		}
+
+
+}
+
+function flekcjaGGPrz()
+{
+		document.getElementById("lekcjaGGPrz").style.display = "block";
+		document.getElementById("lekcjaGGPod").style.display = "none";
+}
+
+function flekcjaGGPod
+{
+		document.getElementById("lekcjaGGPrz").style.display = "none";
+		document.getElementById("lekcjaGGPod").style.display = "block";
+
+
+}
+</script>
+</head>
+
+<body>
+	<div id="formularz">
+		<div style="text-align: center">
+			<label3>
+				Formularz rezerwacji usług edukacyjnych świadczonych przez muzeum narodowe w krakowie
+			</label3>
+			<img src="MNK_tarcza_biala_01.jpg" alt="MNK"/>
+			<h2>
+			<center>
+			<a  href="index.html"><span class="flag-icon flag-icon-pl"></span></a>
+			<a  href="index_ang.html"><span class="flag-icon flag-icon-gb"></span></a>
+			</center>
+			<h2>
+		</div>
+<br>
+<!--Wybieranie oddziaĹu -->
+
+		<br>
+		<form action="send.php" method="post">
+
+		<label>
+			1. Wybór oddziału:
+		</label>
+
+		<div class="ui-select">
+  		<select id="branch" name="branch" style="width:100%;">
+    			<option value="0">Kliknij tutaj..</option>
+    			<option value="1">Gmach Główny</option>
+    			<option value="2">Kamienica Szołayskich im. Feliksa Jasieńskiego</option>
+    			<option value="3">Muzeum im. E. Hutten Czapskiego</option>
+    			<option value="4">Pawilon Józefa Czapskiego</option>
+    			<option value="5">Galeria Sztuki Polskiej XIX wieku w Sukiennicach</option>
+    			<option value="6">Dom Jana Matejki</option>
+    			<option value="7">Pałac Biskupa Erazma Ciołka</option>
+    			<option value="8">Dom Józefa Mehoffera</option>
+    			<option value="9">Ośrodek Kultury Europejskiej EUROPEUM</option>
+  		</select>
+		</div>
+		<br>
+
+		<label>
+		2. Wybór rodzaju zamawianej usługi:
+		</label>
+
+<!-- radioboxy o usĹugach -->
+
+		<label>
+			<label class="container">Oprowadzanie
+			<input type="radio" name="type" value="guided-tours" onclick="sowl()">
+			<span class="checkmark"></span>
+		</label>
+		<label>
+			<label class="container">Spacer
+			<input type="radio" name="type" value="walk" onclick="sowl()">
+			<span class="checkmark"></span>
+		</label>
+		<label>
+			<label class="container">Ko-Lekcja z klasą
+  			<input type="radio" name="type" value="lesson-with-class" onclick="sowl()">
+  			<span class="checkmark"></span>
+		</label>
+		<label>
+			<label class="container">Lekcja Muzealna
+  			<input type="radio" name="type" value="museum-lesson" onclick="owl()">
+  			<span class="checkmark"></span>
+		</label>
+
+		<label>
+		<textarea required name="lesson-title" style="width:100%;" type="text" value="Wprowadź tytuł lekcji:" onblur="if(this.value=='')this.value='Wprowadź tytuł lekcji:';" onfocus="if(this.value=='Wprowadź tytuł lekcji:')this.value='';">Wprowadź tytuł lekcji:</textarea>
+		</label>
+
+
+<!-- wybieranie przedziaĹy wikowego -->
+
+		<label>
+			4. Wybór przedziału wiekowego:
+		</label>
+		<label>
+		<div class="ui-select">
+  		<select id="age-range" name="age-range" style="width:100%;">
+    			<option value="0">Kliknij tutaj..</option>
+    			<option value="1">Przedszkole</option>
+    			<option value="2">Szkoła Podstawowa</option>
+    			<option value="3">Gimnazjum</option>
+    			<option value="4">Szkoła Ponadgimnazjalna</option>
+				<option value="4">Dorośli</option>
+
+  		</select>
+		</div>
+		</label>
+
+<!-- wybieranie tytulu lekcji-->
+<!--
+		<div class="ui-select" style="width:100%; display:none" placeholder="Wybierz Lekcje" id="lekcjaGGPrz">
+		<select>
+			<option value="0">Wybierz Lekcję</option>
+				<optgroup label="Broń i Barwa w Polsce">
+					<option value="1">Kto ty jesteś? - Muzealna lekcja patriotyzmu</option>
+					<option value="2">Rycerz i jego zbroja</option>
+    			<optgroup label="Galeria Rzemiosła Artystycznego">
+					<option value="5">Słońcem malowane. WitraĹźe</option>
+					<option value="6">Historia mierzenia czasu. Zegary przez wieki</option>
+					<option value="7">Przy polskim stole. Historia kuchni, świąteczne obyczaje.</option>
+				<optgroup label="Wyspiański">
+					<option value="8">Słońcem malowane. Witraźe.</option>
+				<optgroup label="Z drugiej strony rzeczy. Polski dizajn po roku 1989">
+					<option value="9">Kubek w kubek? Lekcja dizajnu</option>
+				<optgroup label="Sytuacja się zmieniła">
+					<option value="10">Czy woda jest niebieska, a jabłko okrągłe? - o kolorach i kształtach w sztuce współczesnej</option>
+					<option value="11">Obraz i krajobraz - o pejzaĹźu</option>
+					<option value="12">W pracowni współczesnego artysty</option>
+  		</select>
+		</div>
+				<div class="ui-select" style="width:100%; display:none" placeholder="Wybierz Lekcje" id="lekcjaGGPod">
+		<select>
+			<option value="0">Wybierz Lekcję</option>
+				<optgroup label="Broń i Barwa w Polsce">
+					<option value="1">Kto ty jesteś? - Muzealna lekcja patriotyzmu</option>
+					<option value="2">Rycerz i jego zbroja</option>
+    			<optgroup label="Galeria Rzemiosła Artystycznego">
+					<option value="5">Słońcem malowane. WitraĹźe</option>
+					<option value="6">Historia mierzenia czasu. Zegary przez wieki</option>
+					<option value="7">Przy polskim stole. Historia kuchni, świąteczne obyczaje.</option>
+				<optgroup label="Wyspiański">
+					<option value="8">Słońcem malowane. Witraźe.</option>
+				<optgroup label="Z drugiej strony rzeczy. Polski dizajn po roku 1989">
+					<option value="9">Kubek w kubek? Lekcja dizajnu</option>
+				<optgroup label="Sytuacja się zmieniła">
+					<option value="10">Czy woda jest niebieska, a jabłko okrągłe? - o kolorach i kształtach w sztuce współczesnej</option>
+					<option value="11">Obraz i krajobraz - o pejzaźu</option>
+					<option value="12">W pracowni współczesnego artysty</option>
+  		</select>
+		</div>
+		<div class="ui-select" style="width:90%; display:none" placeholder="Wybierz Lekcje" id="lekcjaKS">
+		<select>
+			<option value="0">Wybierz Lekcję</option>
+    			<option value="1">Lekcja 11</option>
+    			<option value="2">Lekcja 21</option>
+    			<option value="3">Lekcja 31</option>
+    			<option value="4">Lekcja 41</option>
+    			<option value="5">Lekcja 51</option>
+    			<option value="6">Lekcja 61</option>
+    			<option value="7">Lekcja 71</option>
+    			<option value="8">Lekcja 18</option>
+    			<option value="9">Lekcja 91</option>
+    			<option value="10">Lekcja 10</option>
+
+  		</select>
+		</div>
+
+		-->
+		<br>
+
+<!-- Data i Godzina -->
+		<label>
+		5. Wybór Daty i Godziny:
+		</label>
+
+		<label>
+		<div class="ui-select" style="width:25%; float:left;">
+  		<select id="year" name="year" style="width:100%;">
+			<option value="0">Rok</option>
+    			<option value="2018">2018</option>
+    			<option value="2019">2019</option>
+    			<option value="2020">2020</option>
+    			<option value="2021">2021</option>
+ 		</select>
+		</div>
+		<div class="ui-select" style="width:25%; float:left;">
+  		<select id="month" name="month" style="width:100%;">
+			<option value="0">Miesiąc</option>
+    			<option value="1">Styczeń</option>
+    			<option value="2">Luty</option>
+    			<option value="3">Marzec</option>
+    			<option value="4">Kwiecień</option>
+				<option value="5">Maj</option>
+				<option value="6">Czerwiec</option>
+				<option value="7">Lipiec</option>
+				<option value="8">Sierpień</option>
+				<option value="9">Wrzesień</option>
+				<option value="10">Październik</option>
+				<option value="11">Listopad</option>
+				<option value="12">Grudzień</option>
+
+ 		</select>
+		</div>
+		<div class="ui-select" style="width:25%; float:left;">
+  		<select id="day" name="day" style="width:100%;">
+			<option value="0">Dzień</option>
+    			<option value="1">1</option>
+    			<option value="2">2</option>
+    			<option value="3">3</option>
+    			<option value="4">4</option>
+    			<option value="5">5</option>
+    			<option value="6">6</option>
+    			<option value="7">7</option>
+    			<option value="8">8</option>
+    			<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+  		</select>
+		</div>
+		<div class="ui-select" style="width:25%; float:left;">
+  		<select id="time" name="time" style="width:100%;">
+			<option value="0">Godzina</option>
+    			<option value="10:00">10:00</option>
+    			<option value="10:15">10:15</option>
+				<option value="10:20">10:20</option>
+				<option value="10:30">10:30</option>
+				<option value="10:40">10:40</option>
+    			<option value="11:00">11:00</option>
+				<option value="11:20">11:20</option>
+    			<option value="11:30">11:30</option>
+				<option value="11:40">11:40</option>
+				<option value="12:00">12:00</option>
+				<option value="12:20">12:20</option>
+    			<option value="12:30">12:30</option>
+				<option value="12:40">12:40</option>
+    			<option value="13:00">13:00</option>
+				<option value="13:20">13:20</option>
+    			<option value="13:30">13:30</option>
+				<option value="13:40">13:40</option>
+				<option value="14:00">14:00</option>
+				<option value="14:20">14:20</option>
+    			<option value="14:30">14:30</option>
+				<option value="14:40">14:40</option>
+    			<option value="15:00">15:00</option>
+				<option value="15:20">15:20</option>
+    			<option value="15:30">15:30</option>
+				<option value="15:40">15:40</option>
+				<option value="16:00">16:00</option>
+				<option value="16:20">16:20</option>
+    			<option value="16:30">16:30</option>
+				<option value="16:40">16:40</option>
+				<option value="10:15">17:00</option>
+				<option value="17:20">17:20</option>
+				<option value="17:40">17:40</option>
+ 		</select>
+		</div>
+		</label>
+		<br style="clear: both;">
+		<br>
+
+
+<!--radioboxy o jÄzykuzyku -->
+		<label>
+		6. Wybór Języka zamawianej usługi:
+		</label>
+		<label>
+			<label class="container">Polski
+			<input type="radio" name="lang" value="pl">
+			<span class="checkmark"></span>
+		</label>
+
+		<label>
+			<label class="container">Angielski
+  			<input type="radio" name="lang" value="en">
+  			<span class="checkmark"></span>
+		</label>
+	<br>
+
+
+
+
+
+<!--radioboxy o danych kontaktowych -->
+		<label>
+		7. Wprowadź dane kontaktowe:
+		</label>
+	<label>
+			<label class="container">Firmy / placówki oświatowe
+			<input type="radio" name="contact" value="comp-edu">
+			<span class="checkmark"></span>
+		</label>
+
+		<label>
+			<label class="container">osoby prywatne
+			<input type="radio" name="contact" value="priv">
+			<span class="checkmark"></span>
+
+		</label>
+		<label>
+		<textarea name="contact-data" style="width:100%;" type="text" value="Nazwa, telefon, mail, dane do faktury:" onblur="if(this.value=='')this.value='Nazwa, telefon, mail, dane do faktury:';" onfocus="if(this.value=='Nazwa, telefon, mail, dane do faktury:')this.value='';">Nazwa, telefon, mail, dane do faktury:</textarea>
+		</label>
+
+<!--INFORMACJE LICZBOWE -->
+
+
+		<label>
+			Liczba osób w grupie:
+			<input type="number" min="0" placeholder="0" name="person-count" style="width:100%;">
+		</label>
+
+		<label>
+			Liczba opiekunów grupy:
+			<input type="number" min="0" placeholder="0" name="group-leader-count" style="width:100%;">
+		</label>
+
+		<label>
+			Wiek uczestników:
+			<input type="number" min="0" placeholder="0" name="members-age" style="width:100%;">
+		</label>
+
+
+
+<!-- ZGODY PRAWNE -->
+
+	<br>
+<hr>
+		<label2>
+			przyjmuję pełną odpowiedzialność
+			za przygotowanie grupy do pobytu w muzeum narodowym w krakowie
+ 			oraz jej dyscyplinę podczas wizyty w muzeum
+		</label2>
+
+		<label2>
+			ewentualna rezygnacja musi zostać zgłoszona najpóźniej
+			dwa dni przed planowaną wizytą (Mailowo lub telefonicznie)
+			, w przeciwnym razie zamawiający zobowiązany jest do zapłaty 100zł kary.
+		</label2>
+
+<br>
+		<label2>
+			<label class="container">ZGADZAM SIĘ (ZGODA WYMAGANA)
+			<input type="radio" name="agreement-responsibility" value="yes">
+			<span class="checkmark"></span>
+		</label2>
+
+<br>
+<hr />
+
+		<label2>
+			wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w formularzu dla potrzeb niezbędnych
+			do realizacji procesu rezerwacji oraz realizacji zamówionej usługi świadczonej przez muzeum narodowe w
+			krakowie (zgodnie z ustawą  z dn. 29.08.1997r. o
+			ochronie danych osobowych; tekst jednolity: Dz. U z 2014 r., poz.1182 ze zm.).
+
+			Podanie danych osobowych ma charakter dobrowolny, lecz niezbędny do dokonania rezerwacji.
+			Osobom udostępniającym dane osobowe przysługuje prawo dostępu do swoich danych osobowych oraz ich poprawiania.
+		</label2>
+
+  <br>
+
+		<label2>
+			<label class="container">ZGADZAM SIĘ
+			<input type="radio" name="agreement-data-processing" value="yes">
+			<span class="checkmark"></span>
+		</label2>
+
+<br>
+<hr>
+
+
+		<label2>
+			ZGADZAM SIĘ NA OTRZYMYWANIE POCZTĄ ELEKTRONICZNĄ NA POWYŻEJ PODANY ADRES E-MAIL
+			INFORMACJI O DZIAŁACH EDUKACYJNYCH MUZEUM NARODOWEGO
+			W KRAKOWIE (ZGODNIE Z USTAWĄ O ŚWIADCZENIU USŁUG DROGĄ ELEKTRONICZNĄ Z DN. 18 LIPCA 2002R.;
+			TEKST JEDNOLITY: dz.u. Z 2013R.,POZ.1422 ZE ZM.).
+		</label2>
+<br>
+
+		<label2>
+			<label class="container">ZGADZAM SIĘ
+			<input type="radio" name="agreement-receiving-messages" value="yes">
+			<span class="checkmark"></span>
+		</label2>
+
+		<label2>
+			<label class="container">NIE ZGADZAM SIĘ
+			<input type="radio" name="agreement-receiving-messages" value="no">
+			<span class="checkmark"></span>
+		</label2>
+<br>
+<hr>
+		</label2>
+
+			<input id="submit" name="submit" type="submit" value="Wyślij" style="width:100%; border: none;">
+	<br>
+		<label2>
+		<center>
+		Wysłanie formularza jest jednoznaczne z dokonaniem rezerwacji i akceptacją <a target="_blank" href="http://mnk.pl/artykul/regulamin-rezerwacji-muzeum-narodowego-w-krakowie">regulaminu</a>
+		</center>
+		</label2>
+	<br> <br>
+
+
+		<label>
+
+		<label>Centrum informacji i rezerwacji:</label>
+		<label>tel.: +48 012 433 57 44</label>
+		<label>e-mail: rezerwacja@mnk.pl</label>
+
+
+	</form>
+	</div>
+
+
+</body>
+</html>
